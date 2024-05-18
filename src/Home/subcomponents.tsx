@@ -1,7 +1,7 @@
 import { Button, Col, Row } from "react-bootstrap";
 import styled from "styled-components";
 
-export const HomeWrapper = styled.div` 
+export const HomeWrapper = styled.div`
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
@@ -26,7 +26,6 @@ export const OrderList = styled.ul`
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
 `;
 
 export const ListDetials = styled.li`
@@ -35,9 +34,8 @@ export const ListDetials = styled.li`
   text-transform: uppercase;
   color: #555;
   position: relative;
-  right: 40px;
-  font-weight: 400;
-  width: 200px;
+  font-weight: 400; 
+  padding: 0 20px;
   transition: all 0.2s linear;
 `;
 
@@ -70,8 +68,41 @@ export const SignUpButton = styled(Button)`
   border-radius: 2.5rem;
 `;
 
-export const RowContainer = styled(Row)``;
-export const ColContainer = styled(Col)`
-  padding-right: 10px;
-  padding-left: 10px;
+export const RowContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const ColContainer = styled.div<{ width?: string; margin?: string }>`
+  width: ${({ width }) => (width ? width : "100%")};
+  margin: ${({ margin }) => (margin ? margin : null)}; 
+  display: flex;
+  justify-content: end;
+  padding: 0 20px;
+  img{
+    position: relative;
+    left: 100px;
+    top: -35px;
+    object-fit: contain;
+  }
+`;
+
+export const HomeFootertext = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  float:left;
+  margin-top: 10px; 
+  span {
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    line-height: 30px;
+  }
+  i {
+    position: relative;
+    top: 3px;
+    right: -3px;
+  }
 `;
