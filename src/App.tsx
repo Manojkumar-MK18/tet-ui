@@ -1,7 +1,19 @@
-import React from "react";
+import { createGlobalStyle } from "styled-components";
+import Home from "./Home";
 
 function App() {
-  return <div className="App">hi</div>;
+  const GlobalStyle = createGlobalStyle`
+    body{
+
+    font-family: "Kanit", sans-serif;
+    }
+  `;
+  return (
+    <>
+      <Home />
+      <GlobalStyle/>
+    </>
+  );
 }
 
 export default App;
